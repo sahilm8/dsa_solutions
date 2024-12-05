@@ -17,8 +17,8 @@ public class BigDecimalNum {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - i - 1; j++) {
                 BigDecimal bd1 = new BigDecimal(nums[j]);
-                BigDecimal bd2 = new BigDecimal(nums[j - 1]);
-                if (bd2.compareTo(bd1) < 0) {
+                BigDecimal bd2 = new BigDecimal(nums[j + 1]);
+                if (bd2.compareTo(bd1) > 0) {
                     // Swap
                     String temp = nums[j];
                     nums[j] = nums[j + 1];
@@ -27,7 +27,7 @@ public class BigDecimalNum {
             }
         }
         */
-        
+
         return nums;
     }
 
