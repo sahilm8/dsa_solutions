@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -8,25 +8,25 @@ public class BigDecimalNum {
     public static String[] sort(String[] nums) {
         Arrays.sort(nums, (String a, String b) -> {
             BigDecimal bd1 = new BigDecimal(a);
-            BigDecimal bd2 = new BigDecimal(b);  
-            return bd2.compareTo(bd1);          
+            BigDecimal bd2 = new BigDecimal(b);
+            return bd2.compareTo(bd1);
         });
-        
+
         /*
-        // Bubble Sort
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = 0; j < nums.length - i - 1; j++) {
-                BigDecimal bd1 = new BigDecimal(nums[j]);
-                BigDecimal bd2 = new BigDecimal(nums[j + 1]);
-                if (bd2.compareTo(bd1) > 0) {
-                    // Swap
-                    String temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
-        }
-        */
+         * // Bubble Sort
+         * for (int i = 0; i < nums.length - 1; i++) {
+         * for (int j = 0; j < nums.length - i - 1; j++) {
+         * BigDecimal bd1 = new BigDecimal(nums[j]);
+         * BigDecimal bd2 = new BigDecimal(nums[j + 1]);
+         * if (bd2.compareTo(bd1) > 0) {
+         * // Swap
+         * String temp = nums[j];
+         * nums[j] = nums[j + 1];
+         * nums[j + 1] = temp;
+         * }
+         * }
+         * }
+         */
 
         return nums;
     }

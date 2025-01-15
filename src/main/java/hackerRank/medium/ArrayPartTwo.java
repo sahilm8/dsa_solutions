@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.Scanner;
 
@@ -8,13 +8,14 @@ public class ArrayPartTwo {
     }
 
     public static boolean validate(int pos, int leap, int[] game) {
-        if (pos >= game.length) return true; // >= since pos starts from 0.
-        if (pos < 0 || game[pos] == 1) return false;
+        if (pos >= game.length)
+            return true; // >= since pos starts from 0.
+        if (pos < 0 || game[pos] == 1)
+            return false;
         game[pos] = 1; // Visited, hence setting to 1.
-        return
-        validate(pos - 1, leap, game)
-        || validate(pos + 1, leap, game)
-        || validate(pos + leap, leap, game);
+        return validate(pos - 1, leap, game)
+                || validate(pos + 1, leap, game)
+                || validate(pos + leap, leap, game);
     }
 
     public static void main(String[] args) {
@@ -35,5 +36,5 @@ public class ArrayPartTwo {
         }
         scanner.close();
     }
-    
+
 }

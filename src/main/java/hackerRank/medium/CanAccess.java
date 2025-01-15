@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.*;
 

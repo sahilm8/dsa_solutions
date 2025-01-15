@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,10 +23,11 @@ public class CharStack {
                 }
             }
         }
-        if (stack.isEmpty()) return true;
+        if (stack.isEmpty())
+            return true;
         return false;
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {

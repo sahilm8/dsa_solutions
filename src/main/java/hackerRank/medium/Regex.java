@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Regex {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while(scanner.hasNext()) {
+        while (scanner.hasNext()) {
             validate(scanner.nextLine());
         }
         scanner.close();

@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.easy;
+package hackerRank.easy;
 
 public class Welcome {
     public static void main(String[] args) {

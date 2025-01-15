@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -37,5 +37,5 @@ public class Dequeue {
         scanner.close();
         System.out.println(maxUnique(subArrayLength, array));
     }
-    
+
 }

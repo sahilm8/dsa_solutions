@@ -1,4 +1,4 @@
-package com.sahil.solutions.leetCode;
+package leetCode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.Stack;
 import java.util.TreeMap;
 
 public class Medium {
-     // 1041. Robot Bounded in Circle (Medium) [T = O(n), S = O(1)]
+    // 1041. Robot Bounded in Circle (Medium) [T = O(n), S = O(1)]
     public static boolean isRobotBounded(String instructions) {
         int x = 0, y = 0;
         int facing = 0; // N E S W
@@ -33,8 +33,10 @@ public class Medium {
 
     // 91. Decode Ways (Medium) [T = O(n), S = O(n)]
     public static int numDecodings(String s) {
-        if (s.charAt(0) == '0') return 0;
-        if (s.length() == 1) return 1;
+        if (s.charAt(0) == '0')
+            return 0;
+        if (s.length() == 1)
+            return 1;
         // DP
         int[] array = new int[s.length() + 1];
         array[0] = 1;
@@ -115,7 +117,7 @@ public class Medium {
         }
         return triplets;
     }
-    
+
     // 1823. Find the Winner of the Circular Game (Medium) [T = O(n * k), S = O(n)]
     public static int findTheWinner(int n, int k) {
         List<Integer> list = new ArrayList<>();
@@ -166,10 +168,13 @@ public class Medium {
         return sb.toString();
     }
 
-    // 3. Longest Substring Without Repeating Characters (Medium) [T = O(n), S = O(n)]
+    // 3. Longest Substring Without Repeating Characters (Medium) [T = O(n), S =
+    // O(n)]
     public static int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0) return 0;
-        if (s.length() == 1) return 1;
+        if (s.length() == 0)
+            return 0;
+        if (s.length() == 1)
+            return 1;
         // Set & TP
         Set<Character> set = new HashSet<>();
         int left = 0;
@@ -261,7 +266,7 @@ public class Medium {
         for (int i = 0; i <= pattern.length(); i++) {
             stack.push(i + 1);
             if (i == pattern.length() || pattern.charAt(i) == 'I') {
-                while(!stack.isEmpty()) {
+                while (!stack.isEmpty()) {
                     // Gradually building the lexicographically smallest string based on LIFO
                     sb.append(stack.pop());
                 }
@@ -388,9 +393,12 @@ public class Medium {
             // Get the next ugly number by finding the min of the 3 products with the PFs
             array[i] = Math.min(array[p1] * 2, Math.min(array[p2] * 3, array[p3] * 5));
             // Only move the counter for min product
-            if (array[i] == array[p1] * 2) p1++;
-            if (array[i] == array[p2] * 3) p2++;
-            if (array[i] == array[p3] * 5) p3++;
+            if (array[i] == array[p1] * 2)
+                p1++;
+            if (array[i] == array[p2] * 3)
+                p2++;
+            if (array[i] == array[p3] * 5)
+                p3++;
         }
         return array[n - 1];
     }
@@ -444,23 +452,23 @@ public class Medium {
         System.out.println(isRobotBounded("GGLLGGLLGG"));
         System.out.println(numDecodings("226"));
         System.out.println(fractionToDecimal(-1, -2147483648));
-        System.out.println(threeSum(new int[] {-1,0,1,2,-1,-4}));
+        System.out.println(threeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
         System.out.println(_findTheWinner(5, 2));
         System.out.println(betterCompression("i10g6u6"));
         System.out.println(lengthOfLongestSubstring("pwwkew"));
-        System.out.println(groupAnagrams(new String[] {"eat","tea","tan","ate","nat","bat"}));
-        System.out.println(rob(new int[] {2,1,1,2}));
+        System.out.println(groupAnagrams(new String[] { "eat", "tea", "tan", "ate", "nat", "bat" }));
+        System.out.println(rob(new int[] { 2, 1, 1, 2 }));
         System.out.println(countSubstrings("aaa"));
         System.out.println(smallestNumber("IIIDIDDD"));
-        System.out.println(maxArea(new int[] {1,8,6,2,5,4,8,3,7}));
+        System.out.println(maxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }));
         System.out.println(generateParenthesis(3));
-        System.out.println(canJump(new int[] {2,3,1,1,4}));
-        System.out.println(maxProfit(new int[] {7,1,5,3,6,4}));
-        System.out.println(maxProduct(new int[] {2,3,-2,4}));
-        System.out.println(maxSum(new int[] {2,3,-2,4}));
-        System.out.println(minSubArrayLen(7, new int[] {2,3,1,2,4,3}));
+        System.out.println(canJump(new int[] { 2, 3, 1, 1, 4 }));
+        System.out.println(maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+        System.out.println(maxProduct(new int[] { 2, 3, -2, 4 }));
+        System.out.println(maxSum(new int[] { 2, 3, -2, 4 }));
+        System.out.println(minSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 }));
         System.out.println(nthUglyNumber(10));
-        System.out.println(maxSubArrayLen(new int[] {1,-1,5,-2,3}, 3));
-        System.out.println(compress(new char[] {'a','b','b','b','b','b','b','b','b','b','b','b','b'}));
+        System.out.println(maxSubArrayLen(new int[] { 1, -1, 5, -2, 3 }, 3));
+        System.out.println(compress(new char[] { 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b' }));
     }
 }

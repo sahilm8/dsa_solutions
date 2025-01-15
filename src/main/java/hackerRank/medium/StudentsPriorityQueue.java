@@ -1,4 +1,4 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,13 +11,13 @@ public class StudentsPriorityQueue {
         int id;
         String name;
         double cgpa;
-        
+
         public Student(int id, String name, double cgpa) {
             this.id = id;
             this.name = name;
             this.cgpa = cgpa;
         }
-        
+
         public int getId() {
             return this.id;
         }
@@ -30,7 +30,7 @@ public class StudentsPriorityQueue {
             return this.cgpa;
         }
     }
-    
+
     public static class Priorities {
         public List<String> getStudents(List<String> events) {
             Comparator<Student> customComparator = (Student s1, Student s2) -> {
@@ -42,28 +42,27 @@ public class StudentsPriorityQueue {
                 }
                 return Integer.compare(s1.getId(), s2.getId());
             };
-            
+
             PriorityQueue<Student> students = new PriorityQueue<>(customComparator);
-            for (String event: events) {
-            String[] eventDetails = event.split(" ");
-            if (eventDetails[0].equals("ENTER")) {
-                students.add(new Student(
-                    Integer.parseInt(eventDetails[3]),
-                    eventDetails[1],
-                    Double.parseDouble(eventDetails[2])
-                ));
-            } else if (!students.isEmpty() && eventDetails[0].equals("SERVED")) {
-                students.poll();
+            for (String event : events) {
+                String[] eventDetails = event.split(" ");
+                if (eventDetails[0].equals("ENTER")) {
+                    students.add(new Student(
+                            Integer.parseInt(eventDetails[3]),
+                            eventDetails[1],
+                            Double.parseDouble(eventDetails[2])));
+                } else if (!students.isEmpty() && eventDetails[0].equals("SERVED")) {
+                    students.poll();
+                }
             }
-        }
             List<String> result = new ArrayList<>();
-            while(!students.isEmpty()) {
+            while (!students.isEmpty()) {
                 result.add(students.poll().getName());
             }
             return result;
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numberOfEvents = Integer.parseInt(scanner.nextLine());

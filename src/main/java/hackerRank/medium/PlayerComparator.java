@@ -1,27 +1,26 @@
-package com.sahil.solutions.hackerRank.medium;
+package hackerRank.medium;
 
 import java.util.*;
 
 public class PlayerComparator {
     public static class Player {
         public String name;
-        public int score;        
-        
+        public int score;
+
         public Player(String name, int score) {
             this.name = name;
             this.score = score;
         }
-        
-        
+
         public String getName() {
             return this.name;
         }
-        
+
         public int getScore() {
             return this.score;
         }
     }
-    
+
     public static class Checker implements Comparator<Player> {
         @Override
         public int compare(Player p1, Player p2) {
@@ -43,7 +42,7 @@ public class PlayerComparator {
         Checker checker = new Checker();
         Arrays.sort(players, checker);
         for (int i = 0; i < players.length; i++) {
-            System.out.println(players[i].getName() + " " + players[i].getScore());          
+            System.out.println(players[i].getName() + " " + players[i].getScore());
         }
     }
 }

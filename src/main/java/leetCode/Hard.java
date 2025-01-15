@@ -1,4 +1,4 @@
-package com.sahil.solutions.leetCode;
+package leetCode;
 
 public class Hard {
     // 42. Trapping Rain Water (Hard) [T = O(n), S = O(1)]
@@ -30,8 +30,8 @@ public class Hard {
             }
         }
         return totalWater;
-    }   
-    
+    }
+
     // 4. Median of Two Sorted Arrays (Hard) [T = O(Log(min(m,n))), S = O(1)]
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // TP and BS
@@ -79,7 +79,7 @@ public class Hard {
     }
 
     public static void main(String[] args) {
-        System.out.println(trap(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
-        System.out.println(findMedianSortedArrays(new int[] {1,2}, new int[] {3,5}));
+        System.out.println(trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
+        System.out.println(findMedianSortedArrays(new int[] { 1, 2 }, new int[] { 3, 5 }));
     }
 }
